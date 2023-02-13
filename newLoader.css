@@ -15,10 +15,9 @@ body {
     position: relative;
     height: 100px;
     width: 100px;
-    border-bottom: 5px solid red;
     border-radius: 50%;
     animation-name: ring;
-    animation-duration: 1000ms;
+    animation-duration: 2000ms;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     display: flex;
@@ -30,9 +29,41 @@ span {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    animation-name: typo;
+    animation-duration: 2000ms;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    font-family: monospace;
 }
 @keyframes ring {
     0%{
         transform: rotate(-360deg);
+        border-bottom: 2px solid yellow;
+    }
+    
+    50% {
+        border-bottom: 2px solid green;
+    }
+
+    75% {
+        border-bottom: 2px solid blue;
+    }
+
+    100% {
+        border-bottom: 2px solid orange;
+    }
+}
+@keyframes typo {
+    0% {
+        color: yellow;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: blue;
+    }
+    100% {
+        color: orange;
     }
 }
