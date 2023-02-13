@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color: white;
+    overflow-y: hidden;
+}
+  .container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;    
+  }
+
+.spinner {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-bottom: 5px solid red;
+    border-radius: 50%;
+    animation-name: ring;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+@keyframes ring {
+    0%{
+        transform: rotate(-360deg);
+    }
+}

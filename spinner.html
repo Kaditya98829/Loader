@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner</title>
+    <style>
+      body{
+        margin: 0;
+        height: 0;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+        
+        
+      }
+      .outer{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;    
+        min-height: 100vh;    
+      }
+      .ring{
+        width: 10vmax;
+    height: 10vmax;
+    
+    border-bottom: 90px solid rgb(204, 8, 145);
+    border-radius: 50%;
+    animation-name: ring,col;
+    animation-duration: 0.5ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+
+      }
+   
+   @keyframes col {
+    0%{
+      border-bottom: 90px solid rgb(8, 54, 204);
+    }
+    20%{
+      border-bottom: 90px solid rgb(252, 16, 8);
+    }
+    30%{
+      border-bottom: 90px solid rgb(255, 96, 3);
+    }
+    40%{
+      border-bottom: 90px solid rgb(167, 255, 3);
+    }
+    50%{
+      border-bottom: 90px solid rgb(4, 255, 46);
+    }
+    60%{
+      border-bottom: 90px solid rgb(8, 181, 204);
+    }
+    70%{
+      border-bottom: 90px solid rgb(199, 5, 248);
+    }
+    80%{
+      border-bottom: 90px solid rgb(248, 5, 167);
+    }
+    90%{
+      border-bottom: 90px solid rgb(124, 0, 0);
+    }
+    100%{
+      border-bottom: 90px solid rgb(0, 109, 94);
+    }
+   }
+     
+      @keyframes ring{
+     
+     0%{
+        transform:rotate(-360deg);
+     }
+        
+      }
+
+    ::-webkit-scrollbar{
+        width: 20px;
+        background: rgb(83, 58, 58);
+    }
+    ::-webkit-scrollbar-thumb{ 
+        background: rgb(62, 221, 173);
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background: rgb(105, 114, 106);
+    }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="ring">
+            
+        </div>
+        
+    </div>
+</body>
+</html>

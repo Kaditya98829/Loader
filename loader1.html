@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+         align-items: center;
+         justify-content: center;
+         background: black;
+        
+    }
+.loader{
+    height: 100px;
+    width: 100px;
+    background: red;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px red;
+    animation-name:heart;
+    
+    animation-duration: 0.5s ;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    
+
+}
+.loader::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    background: red;
+    width: 100px;
+    height: 100px;
+    border-radius:50px ;
+    box-shadow: -10px -10px 90px red;
+}
+.loader::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    background: red;
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    box-shadow: -10px 10px 90px red;
+}
+@keyframes heart{
+    0%{
+    transform: rotate(-45deg) scale(1.06);
+    }
+    50%{
+    transform: rotate(-45deg) scale(1.00);
+    }
+    100%{
+    transform: rotate(-45deg) scale(1.06);
+    }
+    
+}
+audio{
+    position: fixed;
+    bottom: 0;
+}
+
+</style>
+<body>
+    <div class="loader">
+
+    </div>
+    <audio controls autoplay>
+       <source src="https://res.cloudinary.com/djat12jm7/video/upload/v1659635690/products/aud_y9nxix.mp3" type="audio/mpeg">
+
+    </audio>
+    
+</body>
+</html>
